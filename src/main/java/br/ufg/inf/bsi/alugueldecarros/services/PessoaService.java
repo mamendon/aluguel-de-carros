@@ -40,7 +40,7 @@ public class PessoaService {
 			buscar(id);
 			repo.deleteById(id);	
 		} catch (DataIntegrityViolationException e) {
-			throw new DataIntegrityViolationException("Não é possível excluir uma categoria que possui produtos.");
+			throw new DataIntegrityViolationException("Não é possível deletar essa pessoa.");
 		}		
 	}
 

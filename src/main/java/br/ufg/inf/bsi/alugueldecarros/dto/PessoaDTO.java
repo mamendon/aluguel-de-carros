@@ -5,7 +5,7 @@ import br.ufg.inf.bsi.alugueldecarros.domain.Pessoa;
 
 public class PessoaDTO implements Serializable{
 	private static final long serialVersionUID = 1L;
-	private Integer ID;
+	private Integer Id;
 	private String nome;
 	private String cpf;
 	private String email;
@@ -18,18 +18,20 @@ public class PessoaDTO implements Serializable{
 	
 	
 	public PessoaDTO(Pessoa obj) {
-		this.ID = obj.getId();
+		this.Id = obj.getId();
 		this.nome = obj.getNome();
 		this.cpf = obj.getCpf();
+		this.email = obj.getEmail();
+		this.telefone = obj.getTelefone();
 	}
 
 
 
-	public Integer getID() {
-		return ID;
+	public Integer getId() {
+		return Id;
 	}
 	public void setID(Integer id) {
-		ID = id;
+		Id = id;
 	}
 	public String getNome() {
 		return nome;

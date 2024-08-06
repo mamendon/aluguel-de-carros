@@ -8,6 +8,7 @@ import java.util.stream.Collectors;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,6 +23,7 @@ import br.ufg.inf.bsi.alugueldecarros.services.PessoaService;
 
 @RestController
 @RequestMapping(value = "/pessoas")
+@CrossOrigin(origins = "http://localhost:8100")  // Adicione esta linha para permitir requisições CORS
 public class PessoaResource {
 	
 	@Autowired
